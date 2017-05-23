@@ -68,7 +68,7 @@ var Candy = (function (_super) {
             var i = a.candies.indexOf(this);
             a.candies.splice(i, 1);
             this.div.remove();
-            a.score -= 10;
+            a.score = 0;
         }
     };
     return Candy;
