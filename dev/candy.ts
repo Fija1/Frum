@@ -30,9 +30,10 @@ class Candy extends GameObject {
             a.candies.splice(i, 1);
             this.div.remove();
 
-            a.score -= 10;
+           // a.score -= 10;
 
         }
+        
     }
 
 }
