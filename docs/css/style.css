@@ -1,0 +1,84 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size:20px;
+    overflow:hidden;
+    margin:0px; padding:0px;
+    background-color:#ccc;
+}
+
+body * {
+    position: absolute;
+    display: block;
+    margin:0px; padding:0px;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+}
+
+container {
+    width:1024px;
+    height: 768px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+universe {
+    background-image: url('../images/background.png');
+    background-repeat: repeat-y;
+    width: 1024px;
+    height: 768px;
+    animation: universeanimation 0s linear infinite;
+}
+
+platform {
+    background-image: url('../images/platform.png');
+    background-repeat: repeat-x;
+    width: 2200px;
+    height: 53px;
+    animation: platformanimation 5s linear infinite;
+}
+
+/*alien = 61 × 188 pixels*/
+alien {
+    background-image: url('../images/alien.png');
+    width: 61px;
+    height: 188px;
+}
+
+/* bolletje (candy) 92 × 95 pixels*/
+candy {
+     background-image: url('../images/candy.png');
+    width: 92px;
+    height: 95px;
+}
+
+score {
+    color: white;
+    font-size: 30px;
+    padding: 40px;
+}
+
+
+
+/* animation details here */ 
+
+/*background animation*/
+@keyframes universeanimation {
+    0% {
+        transform: translate(0px, -768px);
+    }
+    100%{
+        transform: translate(0px, 0px);
+    }
+}
+
+/*platform animation*/
+@keyframes platformanimation {
+    0% {
+        transform: translate(0px, 650px);
+    }
+    100%{
+        transform: translate(-1100px, 650px);
+    }
+}
